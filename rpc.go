@@ -95,8 +95,8 @@ type Call interface {
 
 type request struct {
 	JSONRPC string        `json:"jsonrpc"`
-	Method  string        `json:"method"`
-	Params  []interface{} `json:"params,omitempty"`
+	Method  string        `json:"route"`
+	Params  []interface{} `json:"payload,omitempty"`
 	ID      uint32        `json:"id"`
 
 	ctx context.Context
